@@ -62,5 +62,13 @@
     "husky": "6.0.0",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": "eslint --ext .js,.ts,.jsx,.tsx"
   }
 }
