@@ -5,9 +5,10 @@ module.exports = {
     node: true
   },
   extends: [
+    'airbnb',
     'plugin:react/recommended',
-    'standard-with-typescript',
-    'plugin:prettier/recommended' // 添加 prettier 插件
+    'plugin:prettier/recommended', // 添加 prettier 插件
+    'plugin:import/typescript'
   ],
   overrides: [],
   parserOptions: {
