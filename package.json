@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "cd .. && husky install lsecounds/.husky"
+    "lint": "eslint './src/**/*.{js,ts,jsx,jsx}'",
+    "lint:fix": "eslint './src/**/*.{js,ts,jsx,jsx}' --fix"
   },
   "browserslist": {
     "production": [
@@ -59,7 +60,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unicorn": "^47.0.0",
-    "husky": "6.0.0",
+    "husky": "4.3.8",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8"
   },
@@ -69,6 +70,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx}": "eslint --ext .js,.ts,.jsx,.tsx"
+    "*.{js,jsx}": [
+      "eslint './src/**/*.{js,jsx}' --fix"
+    ]
   }
 }
